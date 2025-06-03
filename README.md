@@ -1,6 +1,6 @@
 # Voice-Enabled AI Chatbot with PDF & Web using LangChain, AstraDB, and Ollama
 
-## 🚀 Overview
+## Overview
 
 This project implements a **voice-enabled AI chatbot** that supports **natural language querying** over both:
 
@@ -11,15 +11,15 @@ Built using **LangChain**, **Ollama with LLaMA 3**, and **vector stores** (Astra
 
 ---
 
-## 🧩 Features
+## Features
 
-- 📄 **PDF Knowledge Retrieval**: Extracts and queries PDFs with LLaMA 3 and AstraDB.  
-- 🌐 **Web Data Retrieval**: Loads content from URLs and retrieves answers using ChromaDB.  
-- 🗣️ **Voice Interaction**: Talk to the chatbot via microphone; it responds with speech.  
-- 🧠 **Locally Hosted LLM**: Uses **Ollama** to run **LLaMA 3** model locally (no API cost).  
-- 🔍 **LangChain Integration**: Leverages advanced RAG pipeline for accurate, context-aware answers.  
-- 🔊 **Realistic Text-to-Speech**: Natural-sounding voice output using Edge TTS and PyDub.  
-- 🎧 **Cross-platform Audio Playback**: Uses `sounddevice` for interactive experience.  
+- **PDF Knowledge Retrieval**: Extracts and queries PDFs with LLaMA 3 and AstraDB.  
+- **Web Data Retrieval**: Loads content from URLs and retrieves answers using ChromaDB.  
+- **Voice Interaction**: Talk to the chatbot via microphone; it responds with speech.  
+- **Locally Hosted LLM**: Uses **Ollama** to run **LLaMA 3** model locally (no API cost).  
+- **LangChain Integration**: Leverages advanced RAG pipeline for accurate, context-aware answers.  
+- **Realistic Text-to-Speech**: Natural-sounding voice output using Edge TTS and PyDub.  
+- **Cross-platform Audio Playback**: Uses `sounddevice` for interactive experience.  
 
 ---
 
@@ -39,7 +39,7 @@ Built using **LangChain**, **Ollama with LLaMA 3**, and **vector stores** (Astra
 | Backend APIs             | Flask (Chatbot UI) + FastAPI (Voice API)|
 
 
-## ⚙️ Installation
+## Installation
 
 ### 1. Clone the Repository
 ```bash
@@ -56,7 +56,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🔧 Setup Instructions
+## Setup Instructions
 
 ### Step 1: Set Environment Variables
 
@@ -80,7 +80,7 @@ export GROQ_API_KEY='your_groq_api_key'
 
 ---
 
-## ▶️ Running the Application
+## Running the Application
 
 ### Step 1: Launch Flask UI Backend
 ```bash
@@ -102,23 +102,23 @@ python -m http.server 5500 --bind 0.0.0.0
 ```
 Then open: `http://localhost:5500/index.html`
 
-✅ You can now talk to your chatbot via the browser.
+You can now talk to your chatbot via the browser.
 
 ---
 
-## 📘 How It Works
+## How It Works
 
-### 📄 PDF Querying (via AstraDB)
+### PDF Querying (via AstraDB)
 1. Load and chunk text using PyPDF2.  
 2. Embed chunks using LangChain and store in AstraDB.  
 3. Use LangChain’s `RetrievalQA` to find answers from PDF embeddings.  
 
-### 🌐 Web Querying (via ChromaDB)
+### Web Querying (via ChromaDB)
 1. Extract content using LangChain's WebLoader (Wikipedia/web pages).  
 2. Chunk and embed with ChromaDB as vector store.  
 3. Query responses using LLaMA 3 via LangChain Retriever.  
 
-### 🗣️ Voice Interaction
+### Voice Interaction
 - User speaks via microphone → `speech_recognition` converts to text.  
 - Query is passed to LangChain pipeline (PDF or Web).  
 - LLaMA 3 generates response.  
@@ -127,7 +127,7 @@ Then open: `http://localhost:5500/index.html`
 
 ---
 
-## 🧪 Example Interactions
+## Example Interactions
 
 **PDF-based**
 ```
@@ -143,11 +143,11 @@ Bot: "Python was created by Guido van Rossum in the late 1980s and released in 1
 
 ---
 
-## 🌱 Future Enhancements
+## Future Enhancements
 
-- ✅ Multi-document PDF support  
-- ✅ Web + PDF hybrid querying  
-- 🌐 HTTPS support via SSL certificates  
-- 🧠 Continuous learning from user interaction  
-- 📱 Mobile & PWA frontend for universal access  
-- 🗣️ Multilingual voice input and output  
+- Multi-support  
+- Web PDF hybrid querying  
+- HTTP support via SSL certificate  
+- Continuous learning from user interaction  
+- Mobile & PWA frontend for universal access  
+- Multilingual voice input and output  
