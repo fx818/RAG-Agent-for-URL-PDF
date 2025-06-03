@@ -1,4 +1,4 @@
-# 🧠 Voice-Enabled AI Chatbot with PDF & Web Knowledge using LangChain, AstraDB, and Ollama
+# Voice-Enabled AI Chatbot with PDF & Web using LangChain, AstraDB, and Ollama
 
 ## 🚀 Overview
 
@@ -38,36 +38,13 @@ Built using **LangChain**, **Ollama with LLaMA 3**, and **vector stores** (Astra
 | Frontend                 | HTML + JS (for voice input/output)      |
 | Backend APIs             | Flask (Chatbot UI) + FastAPI (Voice API)|
 
----
-
-## 📂 Project Structure
-
-```
-├── app/
-│   ├── app.py                # Flask UI backend
-│   ├── index.html            # Simple web UI
-│   ├── style.css             # UI styling
-├── voice_support/
-│   ├── audioServer.py        # FastAPI Voice-to-Text & TTS
-├── pdf_engine/
-│   ├── pdf_processor.py      # Extracts and embeds PDF into AstraDB
-├── web_engine/
-│   ├── web_loader.py         # Loads and embeds web data into ChromaDB
-├── utils/
-│   ├── speech_utils.py       # Voice input/output utilities
-├── cert.pem / key.pem        # SSL certificates for HTTPS
-├── requirements.txt
-└── README.md
-```
-
----
 
 ## ⚙️ Installation
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone [https://github.com/your-username/your-repo.git](https://github.com/fx818/RAG-Agent-for-URL-PDF)
+cd RAG-Agent-for-URL-PDF
 ```
 
 ### 2. Install Dependencies
